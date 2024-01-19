@@ -1,10 +1,16 @@
 'use client'
 
-import { Heading, Text, Box, Flex, Image } from '@chakra-ui/react'
+import { Heading, Text, Box, Flex, Image, Stack } from '@chakra-ui/react'
 import styles from './page.module.css'
+import { useRouter } from 'next/navigation'
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 import { data } from '../data'
+import IconButton from './iconButton'
 
 function Home() {
+
+  const router = useRouter()
+
   return (
     <main className={styles.main}>
       <Flex flexDirection={'column'} w={'70%'} pl={20} alignSelf={'start'} >
@@ -19,9 +25,13 @@ function Home() {
         <Box w={750}>
           <Text fontSize={20} color={'logo.300'}>{data.homeText}</Text>
         </Box>
+        <Stack direction={'row'} w={'70%'} pt={4} alignSelf={'start'} spacing={2}>
+          <IconButton icon={FaLinkedin} onClick={() => router.push('https://www.linkedin.com/in/julie-pinchak/')} />
+          <IconButton icon={FaGithubSquare} onClick={() => router.push('https://github.com/jpinchak')} />
+        </Stack>
       </Flex>
       <Box position={'absolute'} pt={125} boxSize={'20%'} right={'20%'} >
-      <Image src='/julie.jpg' alt='Picture of Julie Pinchak' />
+        <Image src='/julie.jpg' alt='Picture of Julie Pinchak' />
       </Box>
     </main>
 
