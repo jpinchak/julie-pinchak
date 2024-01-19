@@ -9,7 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/open-sans": "^5.0.22",
+    "@fontsource/raleway": "^5.0.16",
+    "@fontsource/rammetto-one": "^5.0.18",
+    "@fontsource/tenor-sans": "^5.0.18",
     "@iconscout/react-unicons": "^2.0.2",
+    "framer-motion": "^10.18.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

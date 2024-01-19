@@ -1,22 +1,28 @@
 'use client'
 
-import { Heading, Box, Flex } from '@chakra-ui/react'
+import { Heading, Text, Box, Flex, Image } from '@chakra-ui/react'
 import styles from './page.module.css'
-import { Rammetto_One } from 'next/font/google';
-
-const rammetto = Rammetto_One({ weight: '400', subsets: ['latin'] })
+import { data } from '../data'
 
 function Home() {
   return (
     <main className={styles.main}>
-      <Flex flexDirection={'column'} alignItems={'center'}>
-        <Heading color="white" fontSize={'70px'} pb={0} lineHeight={'65px'} className={rammetto.className}>
-          JULIE
-        </Heading>
-        <Heading color="white" fontSize={'40px'} pt={0} lineHeight={'35px'} className={rammetto.className}>
-          PINCHAK
-        </Heading>
+      <Flex flexDirection={'column'} w={'70%'} pl={20} alignSelf={'start'} >
+        <Flex direction={'row'} pt={120} alignItems={'flex-end'}>
+          <Heading color="logo.300" textStyle={'secondary'} fontSize={80} lineHeight={'98px'}>
+            JULIE
+          </Heading>
+          <Heading color="logo.300" textStyle={'secondary'} fontSize={60} pl={0} >
+            pinchak
+          </Heading>
+        </Flex>
+        <Box w={750}>
+          <Text fontSize={20} color={'logo.300'}>{data.homeText}</Text>
+        </Box>
       </Flex>
+      <Box position={'absolute'} pt={125} boxSize={'20%'} right={'20%'} >
+      <Image src='/julie.jpg' alt='Picture of Julie Pinchak' />
+      </Box>
     </main>
 
   )
