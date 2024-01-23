@@ -7,23 +7,16 @@ import {
   Heading,
   Grid,
   GridItem,
-  Input,
-  FormLabel,
-  FormErrorMessage
 } from '@chakra-ui/react'
 import * as Yup from 'yup';
-import { Formik, FormikProps, useFormik } from "formik";
+import { useFormik, FormikState, FormikProps } from "formik";
+import { emailHandler } from '../../../api/email/route';
 import FormItem from '../formItem';
+import { FormValues } from '@/globalTypes';
 
 function ContactForm() {
-
-  type values = {
-    name: string;
-    emailAddress: string;
-    message: string;
-  }
-
-  const initialValues = {
+  
+  const initialValues: FormValues = {
     name: '',
     emailAddress: '',
     message: ''
@@ -36,21 +29,36 @@ function ContactForm() {
       .required('Name is required.'),
     emailAddress: Yup.string()
       .email('Please enter a valid email address.')
+      .min(5, 'Please enter a valid email address.')
       .max(50, 'Please provide a shorter email address.')
       .required('An email address is required so we can get in touch!'),
     message: Yup.string().email('Invalid email').required('Required'),
   });
 
-  const formik = useFormik({
+  const formik: FormikProps<FormValues> = useFormik({
     initialValues,
     validationSchema,
-    onSubmit: () => console.log('halp'),
+    onSubmit: () => console.log('submitted'),
     validateOnBlur: false,
     validateOnChange: false,
   })
 
+  const onSubmit = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (formik.isValid) {
+      emailHandler({
+        subject: `Message from ${formik.values.name}, ${formik.values.emailAddress}`,
+        message: formik.values.message
+      })
+      formik.resetForm();
+      console.log(formik.values)
+    } else {
+      console.log('no bueno')
+    }
+  }
+
   return (
-    <form onSubmit={() => console.log('ferk')}>
+    <form>
       <FormControl id='name' isInvalid={!!Object.values(formik.errors).length}>
         <Grid
           w='60vw'
@@ -77,11 +85,7 @@ function ContactForm() {
             <FormItem name='message' label='Message' inputType='textarea' placeholder='Type your message here!' formik={formik} />
           </GridItem>
           <GridItem gridRow={5} px={2}>
-            <Button _hover={{ backgroundColor: 'logo.600' }} px={3} py={1} borderRadius={5} type='submit' border={'2px solid'} borderColor={'logo.300'} color='logo.300' onClick={e => {
-              e.preventDefault()
-              formik.validateForm()
-              console.log(formik.errors)
-            }}>Send it</Button>
+            <Button _hover={{ backgroundColor: 'logo.600' }} px={3} py={1} borderRadius={5} type='submit' border={'2px solid'} borderColor={'logo.300'} color='logo.300' onClick={e => onSubmit(e)}>Send it</Button>
           </GridItem>
         </Grid>
       </FormControl>
