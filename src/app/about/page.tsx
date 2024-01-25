@@ -5,16 +5,16 @@ import { data } from '../../data'
 
 function About() {
 
-  const workExperience = data.workExperience.map(job => {
+  const workExperience = data.workExperience.map((job, iterator) => {
     return (
-      <Flex flexDir='column'>
+      <Flex flexDir='column' key={iterator}>
         <Text fontSize={'md'} fontWeight={700}>{`${job.company} (${job.companyDescriptor})`} </Text>
         <Flex justifyContent={'space-between'}>
           <Text fontSize={'md'}>{job.jobTitle}</Text>
           <Text fontSize={'sm'}>{job.dates}</Text>
         </Flex>
-        {job.description.map((description: string): React.ReactNode => {
-          return <Text fontSize={'xs'}>{description}</Text>
+        {job.description.map((description: string, iterator: number): React.ReactNode => {
+          return <Text key={iterator} fontSize={'xs'}>{description}</Text>
         })}
         <Box height={5} />
       </Flex>
@@ -23,7 +23,7 @@ function About() {
 
   const education = data.education.map(school => {
     return (
-      <Flex flexDir='column'>
+      <Flex flexDir='column' key={school.name}>
         <Text fontSize={'md'}>{school.name}</Text>
         <Text fontSize={'sm'}>{`${school.degree}, ${school.degreeDate}`}</Text>
       </Flex>

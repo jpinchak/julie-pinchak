@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
+import { Show } from '@chakra-ui/react'
 import Navbar from './navbar'
+import Menu from './menu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <Navbar />
+          <Show above='xl'>
+            <Navbar />
+          </Show>
+          <Show below='xl'>
+            <Menu />
+          </Show>
           {children}
         </Providers>
       </body>

@@ -1,4 +1,4 @@
-import { extendBaseTheme, defineStyleConfig, defineStyle } from '@chakra-ui/react'
+import { extendBaseTheme } from '@chakra-ui/react'
 import { modalTheme } from './modalTheme'
 import { buttonTheme } from './buttonTheme'
 
@@ -42,7 +42,14 @@ export const theme = extendBaseTheme({
   },
   components: {
     Modal: modalTheme,
-    Button: buttonTheme
+    Button: buttonTheme,
+  },
+  breakpoints: {
+    xs: '300px',
+    sm: '450px',
+    md: '750px',
+    lg: '1200px',
+    xl: '1400px',
   },
   styles: {
     global: () => ({

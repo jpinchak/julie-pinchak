@@ -14,15 +14,29 @@ function Home() {
   return (
     <main className={styles.main}>
       <Flex flexDirection={'column'} w={'70%'} pl={20} alignSelf={'start'} >
-        <Flex direction={'row'} pt={120} alignItems={'flex-end'}>
-          <Heading color="pinks.500" textStyle={'secondary'} fontSize={80} lineHeight={'98px'}>
+        <Flex 
+          direction={['column', null, null, null, 'row', ]}
+          pt={120}
+          alignItems={['flex-start', null, null, null, 'flex-end']}
+        >
+          <Heading
+            color="pinks.500"
+            textStyle={'secondary'}
+            fontSize={[15, 30, 30, 40, 50, 80]}
+            lineHeight={['20px', '34px', '34px', '44px', '60px', '98px']}
+          >
             JULIE
           </Heading>
-          <Heading color="pinks.500" textStyle={'secondary'} fontSize={60} pl={0} >
+          <Heading
+            color="pinks.500"
+            textStyle={'secondary'}
+            fontSize={[12, 20, 22, 25, 40, 60]}
+            pl={0}
+          >
             pinchak
           </Heading>
         </Flex>
-        <Box w={750}>
+        <Box w={[200, 200, 200, 250, 450, 750]}>
           <Text fontSize={20} color={'pinks.500'}>{data.homeText}</Text>
         </Box>
         <Stack direction={'row'} w={'70%'} pt={4} alignSelf={'start'} spacing={2}>

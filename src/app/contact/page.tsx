@@ -45,10 +45,10 @@ function ContactForm() {
   const handleFormSubmit = (values: FormValues, actions: FormikHelpers<FormValues>) => {
     if (!!actions.validateForm) {
       try {
-        // emailHandler({
-        //   subject: `Julie's website got a message from ${values.name}, ${values.emailAddress}`,
-        //   message: values.message
-        // })
+        emailHandler({
+          subject: `Julie's website got a message from ${values.name}, ${values.emailAddress}`,
+          message: values.message
+        })
         actions.resetForm()
         onOpen()
       } catch (error) {
