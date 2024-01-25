@@ -76,7 +76,7 @@ function ContactForm() {
             pl='5vw'
           >
             <Flex flexDir={'column'} alignItems={'flex-start'}>
-              <Heading gridRow={1} gridColumnStart={1} gridColumnEnd={2} fontSize={28} fontWeight={700} color={'pinks.500'} px={2}>Let's connect</Heading>
+              <Heading gridRow={1} gridColumnStart={1} gridColumnEnd={2} fontSize={28} fontWeight={700} color={'pinks.500'} px={2}>{`Let's connect`}</Heading>
               <Text px={2} color={'pinks.500'}>
                 Please reach out with any questions, comments, ideas, or just to connect!
               </Text>
