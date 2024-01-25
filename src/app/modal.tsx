@@ -47,10 +47,15 @@ function Modal({
   return (
     <ChakraModal isCentered size="md" isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent bg={'white'} width={'50%'} minH={'38%'}>
+      <ModalContent
+        bg={'white'}
+        width={['90%', null, null, null, '50%']}
+        minH={'38%'}
+        px={0}
+      >
         <ModalHeader color="blues.800" pt={7} alignSelf={'center'}>{modalTitle}</ModalHeader>
         <ModalCloseButton color="blues.800" pt={1} />
-        <ModalBody px={20} color="blues.700" textAlign={'center'}>{bodyText}</ModalBody>
+        <ModalBody px={[5, null, null, 20]} color="blues.700" textAlign={'center'}>{bodyText}</ModalBody>
 
         <ModalFooter justifyContent='center' pb={6}>
           <Button colorScheme='pinks' variant='solid' onClick={handleMainButtonClick} mx={2}>{buttonText}</Button>
