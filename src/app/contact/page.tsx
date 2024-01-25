@@ -6,15 +6,19 @@ import {
   Heading,
   Grid,
   GridItem,
-} from '@chakra-ui/react'
+  useDisclosure
+} from '@chakra-ui/react';
+import { useRouter } from 'next/navigation';
 import * as Yup from 'yup';
 import { Formik, FormikHelpers } from "formik";
 import { emailHandler } from '../../../api/email/route';
 import FormItem from '../formItem';
 import { FormValues } from '@/globalTypes';
-import { act } from 'react-dom/test-utils';
+import Modal from '../modal';
 
 function ContactForm() {
+
+  const router = useRouter();
 
   const initialValues: FormValues = {
     name: '',
@@ -35,21 +39,21 @@ function ContactForm() {
     message: Yup.string().required('Please enter a message to send!'),
   });
 
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const handleFormSubmit = (values: FormValues, actions: FormikHelpers<FormValues>) => {
     if (!!actions.validateForm) {
-      console.log('in is valid')
       try {
-        console.log('in the try')
-        emailHandler({
-          subject: `Julie's website got a message from ${values.name}, ${values.emailAddress}`,
-          message: values.message
-        })
+        // emailHandler({
+        //   subject: `Julie's website got a message from ${values.name}, ${values.emailAddress}`,
+        //   message: values.message
+        // })
         actions.resetForm()
+        onOpen()
       } catch (error) {
         console.log('error: ', error)
       }
-    } else {
-      console.log('things should not be resetting')
     }
   }
 
@@ -70,9 +74,9 @@ function ContactForm() {
             templateRows='1fr 1fr 2fr 3fr 1fr'
             templateColumns='repeat(2, 1fr)'
           >
-            <Heading gridRow={1} gridColumnStart={1} gridColumnEnd={2} fontSize={28} fontWeight={700} color={'logo.300'} px={2}>Let's connect</Heading>
+            <Heading gridRow={1} gridColumnStart={1} gridColumnEnd={2} fontSize={28} fontWeight={700} color={'pinks.500'} px={2}>Let's connect</Heading>
             <GridItem gridRow={2} colSpan={2}>
-              <Text px={2} color={'logo.300'}>
+              <Text px={2} color={'pinks.500'}>
                 Please reach out with any questions, comments, ideas, or just to connect!
               </Text>
             </GridItem>
@@ -100,10 +104,20 @@ function ContactForm() {
                 placeholder='Type your message here!'
               />
             </GridItem>
-            <GridItem gridRow={5} px={2}>
-              <Button _hover={{ backgroundColor: 'logo.600' }} px={3} py={1} borderRadius={5} type='submit' border={'2px solid'} borderColor={'logo.300'} color='logo.300' >Send it</Button>
+            <GridItem gridRow={5}>
+              <Button type='submit' colorScheme='pinks' variant='solid' >Send it</Button>
             </GridItem>
           </Grid>
+          <Modal
+            isOpen={isOpen}
+            onClose={onClose}
+            modalTitle='Success!'
+            bodyText={`You're email has been sent! I can't wait to connect.`}
+            buttonText='Okay'
+            buttonAction={onClose}
+            secondaryButtonText='Take me home'
+            secondaryButtonAction={() => router.push('/')}
+          />
         </form>
       )}
     </Formik>

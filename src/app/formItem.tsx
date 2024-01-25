@@ -21,7 +21,7 @@ function FormItem({ direction = 'column', label, type, ...props }: FormItemProps
   return (
     <FormControl isInvalid={meta.touched && !!meta.error}>
       <Stack direction={direction} p={1}>
-        <FormLabel color="logo.300">{label}</FormLabel>
+        <FormLabel color="pinks.500">{label}</FormLabel>
         <Field as={type} {...field} {...props} />
         <FormErrorMessage>{meta.error}</FormErrorMessage>
       </Stack>

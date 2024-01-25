@@ -15,15 +15,15 @@ function Home() {
     <main className={styles.main}>
       <Flex flexDirection={'column'} w={'70%'} pl={20} alignSelf={'start'} >
         <Flex direction={'row'} pt={120} alignItems={'flex-end'}>
-          <Heading color="logo.300" textStyle={'secondary'} fontSize={80} lineHeight={'98px'}>
+          <Heading color="pinks.500" textStyle={'secondary'} fontSize={80} lineHeight={'98px'}>
             JULIE
           </Heading>
-          <Heading color="logo.300" textStyle={'secondary'} fontSize={60} pl={0} >
+          <Heading color="pinks.500" textStyle={'secondary'} fontSize={60} pl={0} >
             pinchak
           </Heading>
         </Flex>
         <Box w={750}>
-          <Text fontSize={20} color={'logo.300'}>{data.homeText}</Text>
+          <Text fontSize={20} color={'pinks.500'}>{data.homeText}</Text>
         </Box>
         <Stack direction={'row'} w={'70%'} pt={4} alignSelf={'start'} spacing={2}>
           <IconButton icon={FaLinkedin} onClick={() => router.push('https://www.linkedin.com/in/julie-pinchak/')} />

@@ -1,14 +1,20 @@
-import { extendBaseTheme } from '@chakra-ui/react'
+import { extendBaseTheme, defineStyleConfig, defineStyle } from '@chakra-ui/react'
+import { modalTheme } from './modalTheme'
+import { buttonTheme } from './buttonTheme'
 
 export const theme = extendBaseTheme({
   colors: {
-    logo: {
-      100: '#cc0066',
-      200: '#ff0080',
-      300: '#da1686',
-      400: '#ffaa33',
+    blues: {
       500: '#1edafe',
-      600: '#18aecb'
+      600: '#18aecb',
+      700: '#159cb6',
+      800: '#138ba2'
+    },
+    pinks: {
+      400: '#ff0080',
+      500: '#da1686',
+      600: '#cc0066',
+      700: '#c41378',
     },
     neutral: {
       100: '#ffffff',
@@ -19,7 +25,7 @@ export const theme = extendBaseTheme({
     },
     error: {
       500: '#a50000',
-      600: '#8b0000' 
+      600: '#8b0000'
     },
   },
   fonts: {
@@ -33,6 +39,10 @@ export const theme = extendBaseTheme({
     secondary: {
       fontFamily: `Rammetto One, sans-serif`,
     }
+  },
+  components: {
+    Modal: modalTheme,
+    Button: buttonTheme
   },
   styles: {
     global: () => ({

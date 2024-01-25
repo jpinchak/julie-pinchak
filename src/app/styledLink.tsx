@@ -12,10 +12,10 @@ function StyledLink({ linkText, path, style = 'primary' }: linkProps) {
     <Link href={path} passHref>
       <Button 
         p={'8px'}
-        color={style === 'primary' ? 'logo.500' : 'logo.200'}
+        colorScheme={style === 'primary' ? 'blues' : 'pinks'}
+        variant='link'
         fontSize={20}
         fontWeight={'bold'}
-        _hover={{color: style === 'primary' ? 'logo.600' : 'logo.300'}}
       >
         {linkText}
       </Button>
