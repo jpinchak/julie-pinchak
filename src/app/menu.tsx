@@ -22,13 +22,13 @@ function Menu() {
         float={'right'}
       />
       <MenuList>
-        <MenuItem as={Link} href='/'>
+        <MenuItem color='pinks.500' as={Link} href='/'>
           Home
         </MenuItem>
-        <MenuItem as={Link} href='/about'>
+        <MenuItem as={Link} color='pinks.500' href='/about'>
           About Me
         </MenuItem>
-        <MenuItem as={Link} href='/contact'>
+        <MenuItem as={Link} color='pinks.500' href='/contact'>
           Get in touch
         </MenuItem>
       </MenuList>

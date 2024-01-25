@@ -1,6 +1,7 @@
 import { extendBaseTheme } from '@chakra-ui/react'
 import { modalTheme } from './modalTheme'
 import { buttonTheme } from './buttonTheme'
+import { menuTheme } from './menuTheme'
 
 export const theme = extendBaseTheme({
   colors: {
@@ -43,6 +44,7 @@ export const theme = extendBaseTheme({
   components: {
     Modal: modalTheme,
     Button: buttonTheme,
+    Menu: menuTheme
   },
   breakpoints: {
     xs: '300px',

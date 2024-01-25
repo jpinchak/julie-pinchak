@@ -6,6 +6,7 @@ import {
   Heading,
   Grid,
   GridItem,
+  Flex,
   useDisclosure
 } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
@@ -45,10 +46,10 @@ function ContactForm() {
   const handleFormSubmit = (values: FormValues, actions: FormikHelpers<FormValues>) => {
     if (!!actions.validateForm) {
       try {
-        emailHandler({
-          subject: `Julie's website got a message from ${values.name}, ${values.emailAddress}`,
-          message: values.message
-        })
+        // emailHandler({
+        //   subject: `Julie's website got a message from ${values.name}, ${values.emailAddress}`,
+        //   message: values.message
+        // })
         actions.resetForm()
         onOpen()
       } catch (error) {
@@ -65,49 +66,46 @@ function ContactForm() {
     >
       {formik => (
         <form onSubmit={formik.handleSubmit}>
-          <Grid
+          <Flex
+            flexDir={'column'}
+            alignItems={'flex-start'}
             w='60vw'
             h='70%'
             alignSelf='center'
             pt='15%'
             pl='5vw'
-            templateRows='1fr 1fr 2fr 3fr 1fr'
-            templateColumns='repeat(2, 1fr)'
           >
-            <Heading gridRow={1} gridColumnStart={1} gridColumnEnd={2} fontSize={28} fontWeight={700} color={'pinks.500'} px={2}>Let's connect</Heading>
-            <GridItem gridRow={2} colSpan={2}>
+            <Flex flexDir={'column'} alignItems={'flex-start'}>
+              <Heading gridRow={1} gridColumnStart={1} gridColumnEnd={2} fontSize={28} fontWeight={700} color={'pinks.500'} px={2}>Let's connect</Heading>
               <Text px={2} color={'pinks.500'}>
                 Please reach out with any questions, comments, ideas, or just to connect!
               </Text>
-            </GridItem>
-            <GridItem gridColumn={1} gridRow={3}>
+            </Flex>
+            <Flex flexDir={['column', null, null, null, 'row', null]} alignContent={['flex-start', null, null, null, 'flex-end', null]}>
               <FormItem
                 name='name'
                 label='Name'
                 type='input'
                 placeholder='Julie'
+                width={[250, 275, 325, 400, 300, 400]}
               />
-            </GridItem>
-            <GridItem gridColumn={2} gridRow={3}>
               <FormItem
                 name='emailAddress'
                 label='Email Address'
                 type='input'
                 placeholder='email@email.email'
+                width={[250, 275, 325, 400, 300, 400]}
               />
-            </GridItem>
-            <GridItem gridRow={4} colSpan={2}>
-              <FormItem
-                name='message'
-                label='Message'
-                type='textarea'
-                placeholder='Type your message here!'
-              />
-            </GridItem>
-            <GridItem gridRow={5}>
-              <Button type='submit' colorScheme='pinks' variant='solid' >Send it</Button>
-            </GridItem>
-          </Grid>
+            </Flex>
+            <FormItem
+              name='message'
+              label='Message'
+              type='textarea'
+              placeholder='Type your message here!'
+              width={[250, 275, 325, 400, 600, 800]}
+            />
+            <Button mt={4} type='submit' colorScheme='pinks' variant='solid' >Send it</Button>
+          </Flex>
           <Modal
             isOpen={isOpen}
             onClose={onClose}
@@ -115,7 +113,7 @@ function ContactForm() {
             bodyText={`You're email has been sent! I can't wait to connect.`}
             buttonText='Okay'
             buttonAction={onClose}
-            secondaryButtonText='Take me home'
+            secondaryButtonText='Home'
             secondaryButtonAction={() => router.push('/')}
           />
         </form>

@@ -40,8 +40,8 @@ function Home() {
           <Text fontSize={20} color={'pinks.500'}>{data.homeText}</Text>
         </Box>
         <Stack direction={'row'} w={'70%'} pt={4} alignSelf={'start'} spacing={2}>
-          <IconButton icon={FaLinkedin} onClick={() => router.push('https://www.linkedin.com/in/julie-pinchak/')} />
-          <IconButton icon={FaGithubSquare} onClick={() => router.push('https://github.com/jpinchak')} />
+          <IconButton color={'pinks.500'} icon={FaLinkedin} onClick={() => router.push('https://www.linkedin.com/in/julie-pinchak/')} />
+          <IconButton color={'pinks.500'} icon={FaGithubSquare} onClick={() => router.push('https://github.com/jpinchak')} />
         </Stack>
       </Flex>
       <Box position={'absolute'} pt={125} boxSize={'20%'} right={'20%'} >
