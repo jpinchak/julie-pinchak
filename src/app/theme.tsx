@@ -50,8 +50,9 @@ export const theme = extendBaseTheme({
     xs: '300px',
     sm: '450px',
     md: '750px',
-    lg: '1200px',
-    xl: '1400px',
+    lg: '1000px',
+    xl: '1200px',
+    xxl: '1400px',
   },
   styles: {
     global: () => ({
