@@ -1028,6 +1028,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
+"@fontsource/lato@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.18.tgz#ad6037c5f1bf8e3604225ef53464fef60c2fea86"
+  integrity sha512-lJa0f4MPXtHsZsLz37wo7d4m5odfOdwCNRg0IjV06ri/fIPypJLEuUB12oWCJ38DDD/XhKVSQPo8BWV8CRBhzQ==
+
 "@fontsource/open-sans@^5.0.22":
   version "5.0.22"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.22.tgz#ff5d4de6301e58a1da79acfc838eca71a631f663"
@@ -1042,6 +1047,11 @@
   version "5.0.18"
   resolved "https://registry.yarnpkg.com/@fontsource/rammetto-one/-/rammetto-one-5.0.18.tgz#89dbd8f5ad76a2a7a347f2a7d387d6fc61d5da9f"
   integrity sha512-y5dHbhkZOMjG+qRYteNLnU4LnsJziqhW/3b1ph4+PyLcKXfIfY1m3C2Mopr6njlLVe5km8COMdITy3migakc2A==
+
+"@fontsource/sriracha@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/sriracha/-/sriracha-5.0.18.tgz#e4138462839327213289029401797e275a90dcd4"
+  integrity sha512-ka1tQVBx8AcWz3NQLrXgpPHH9NVE5yCLTIrbFQlR79OD24oV0QnCPi28sr7FgaS4R8zoFASAue/8zeXd3Qxt2A==
 
 "@fontsource/tenor-sans@^5.0.18":
   version "5.0.18"

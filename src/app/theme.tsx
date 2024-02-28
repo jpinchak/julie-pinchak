@@ -6,7 +6,7 @@ import { menuTheme } from './menuTheme'
 export const theme = extendBaseTheme({
   colors: {
     blues: {
-      500: '#1edafe',
+      500: '#00a78e',
       600: '#18aecb',
       700: '#159cb6',
       800: '#138ba2'
@@ -30,7 +30,7 @@ export const theme = extendBaseTheme({
     },
   },
   fonts: {
-    heading: `Rammetto One, sans-serif`,
+    heading: `Lato, sans-serif`,
     body: `Tenor Sans, sans-serif`,
   },
   textStyles: {
@@ -38,7 +38,7 @@ export const theme = extendBaseTheme({
       fontFamily: `Tenor Sans, sans-serif`
     },
     secondary: {
-      fontFamily: `Rammetto One, sans-serif`,
+      fontFamily: `Lato, sans-serif`,
     }
   },
   components: {
@@ -57,7 +57,7 @@ export const theme = extendBaseTheme({
   styles: {
     global: () => ({
       body: {
-        bg: 'linear-gradient(90deg, #1edafe 70%, #da1686 30%)'
+        bg: '#ffd2d9'
       }
     })
   }

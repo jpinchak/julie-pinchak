@@ -2,7 +2,7 @@
 
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraBaseProvider } from '@chakra-ui/react'
-import '@fontsource/rammetto-one'
+import '@fontsource/sriracha'
 import '@fontsource/tenor-sans'
 import { theme } from './theme'
 

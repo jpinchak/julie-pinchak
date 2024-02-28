@@ -1,4 +1,6 @@
 export const data = {
+  name: `Julie Pinchak`,
+  title: `Front end developer extraordinaire`,
   homeText: `Hi there. I'm a software developer focusing on front end development who loves creating clean and reusable components. My background in mathematics has helped hone my skills in deductive reasoning. Additionally, my seven years as a systems engineer has helped me see the big picture of a project and know the right questions to ask to suss out the requirements. I am a strong communicator and a great team player. I look forward to seeing what we can build together.`,
   workExperience: [
     {
