@@ -7,12 +7,12 @@ export const theme = extendBaseTheme({
   colors: {
     blues: {
       500: '#00a78e',
-      600: '#18aecb',
-      700: '#159cb6',
-      800: '#138ba2'
+      600: '#076a63',
     },
     pinks: {
-      400: '#ff0080',
+      200: '#ffd2d9',
+      300: '#f6aab6',
+      400: '#f0788c',
       500: '#da1686',
       600: '#cc0066',
       700: '#c41378',
@@ -30,15 +30,15 @@ export const theme = extendBaseTheme({
     },
   },
   fonts: {
-    heading: `Lato, sans-serif`,
-    body: `Tenor Sans, sans-serif`,
+    heading: `Cairo, sans-serif`,
+    body: `Cairo, sans-serif`,
   },
   textStyles: {
     primary: {
-      fontFamily: `Tenor Sans, sans-serif`
+      fontFamily: `Cairo, sans-serif`
     },
     secondary: {
-      fontFamily: `Lato, sans-serif`,
+      fontFamily: `Cairo, sans-serif`,
     }
   },
   components: {

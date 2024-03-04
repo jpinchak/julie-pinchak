@@ -4,7 +4,6 @@ import './globals.css'
 import { Providers } from './providers'
 import { Show } from '@chakra-ui/react'
 import Navbar from './navbar'
-import Menu from './menu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,12 +27,7 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-          <Show above='xl'>
-            <Navbar />
-          </Show>
-          <Show below='xl'>
-            <Menu />
-          </Show>
+          <Navbar />
           {children}
         </Providers>
       </body>

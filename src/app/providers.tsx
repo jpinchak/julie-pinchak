@@ -2,7 +2,8 @@
 
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraBaseProvider } from '@chakra-ui/react'
-import '@fontsource/sriracha'
+import 'react-multi-carousel/lib/styles.css'
+import '@fontsource/cairo'
 import '@fontsource/tenor-sans'
 import { theme } from './theme'
 

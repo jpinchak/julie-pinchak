@@ -6,18 +6,15 @@ import StyledLink from './styledLink'
 export default function NotFound() {
   return (
     <Flex
-      width={['70%', null, null, null, '100%']}
+      width={'100%'}
       flexDirection={'column'}
       alignItems={'center'}
-      pt={100}
-      color={'neutral.100'}
+      pt={'8vh'}
     >
       <Heading fontSize={25} color={'pinks.500'}>Not Found</Heading>
       <Text color="pinks.500">{`So sorry, looks like that link didn't work!`}</Text>
       <Text color="pinks.500">{`Here's a picture of Teddy to make up for that.`}</Text>
-      <Box w={'30vw'} pt={15}>
-        <Image src='/teddy.jpg' alt='Picture of cute dog' />
-      </Box>
+      <Image src='/teddy.jpg' alt='Picture of cute dog' width={'30vw'} borderRadius={'30'}/>
       <StyledLink style='secondary' path='/' linkText='Home' />
     </Flex>
   )

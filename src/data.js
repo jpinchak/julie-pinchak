@@ -1,7 +1,25 @@
+import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
+import {
+  FaAngular,
+  FaFigma,
+  FaGithub,
+  FaPython,
+  FaReact
+} from "react-icons/fa";
+import {
+  SiChakraui,
+  SiGraphql,
+  SiJira,
+  SiStorybook,
+  SiStyledcomponents,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+
 export const data = {
   name: `Julie Pinchak`,
   title: `Front end developer extraordinaire`,
-  homeText: `Hi there. I'm a software developer focusing on front end development who loves creating clean and reusable components. My background in mathematics has helped hone my skills in deductive reasoning. Additionally, my seven years as a systems engineer has helped me see the big picture of a project and know the right questions to ask to suss out the requirements. I am a strong communicator and a great team player. I look forward to seeing what we can build together.`,
+  homeText: `I'm a software developer who builds clean, testable, reusable components`,
+  AboutText: `I'm a software developer focusing on front end development who loves creating clean and reusable components. My background in mathematics has helped hone my skills in deductive reasoning. Additionally, my seven years as a systems engineer has helped me see the big picture of a project and know the right questions to ask to suss out the requirements. I am a strong communicator and a great team player. I look forward to seeing what we can build together.`,
   workExperience: [
     {
       company: 'Spotter',
@@ -59,5 +77,20 @@ export const data = {
       degreeDate: '2009',
       degree: 'Bachelor of Arts'
     }
+  ],
+  techStack: [
+    {name: 'React', iconName: FaReact},
+    {name: 'Next.js', iconName: TbBrandNextjs},
+    {name: 'Figma', iconName: FaFigma},
+    {name: 'Jira', iconName: SiJira},
+    {name: 'Storybook', iconName: SiStorybook},
+    {name: 'Typescript', iconName: BiLogoTypescript},
+    {name: 'Chakra UI', iconName: SiChakraui},
+    {name: 'styled components', iconName: SiStyledcomponents},
+    {name: 'Angular', iconName: FaAngular},
+    {name: 'Python', iconName: FaPython},
+    {name: 'GitHub', iconName: FaGithub},
+    {name: 'GraphQL', iconName: SiGraphql},
+    {name: 'PostgreSQL', iconName: BiLogoPostgresql}
   ]
 }

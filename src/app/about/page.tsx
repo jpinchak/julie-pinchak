@@ -32,10 +32,10 @@ function About() {
 
   return (
     <>
-      <Heading color={'pinks.500'} fontSize={24} width={'70%'} py={5} textAlign={'center'}>
+      <Heading color={'pinks.500'} fontSize={24} width={'100%'} py={5} textAlign={'center'}>
         About me
       </Heading>
-      <Flex flexDir='column' width={'70%'} px={8} pb={10} alignContent={'flex-start'} color="black">
+      <Flex flexDir='column' width={'100%'} px={8} pb={10} alignContent={'flex-start'} color="black">
         <Heading color={'pinks.500'} fontWeight={700} fontSize={18}>
           Work Experience
         </Heading>
