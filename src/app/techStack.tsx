@@ -59,6 +59,7 @@ function TechStack() {
     >
       {data.techStack.map(tile => (
         <TechStackTile
+          key={tile.name}
           name={tile.name}
           iconName={tile.iconName}
         />

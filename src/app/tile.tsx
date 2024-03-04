@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, forwardRef } from 'react'
+import { useState, forwardRef, ForwardedRef, LegacyRef } from 'react'
 import { Box, Heading } from '@chakra-ui/react'
 import { motion, HTMLMotionProps } from 'framer-motion'
 import CustomStarIcon from './customStarIcon'
@@ -13,11 +13,17 @@ type CustomStarIconProps<T> = {
   children?: T
 } & HTMLMotionProps<'div'>
 
-const MotionStarComponent = forwardRef<HTMLDivElement, CustomStarIconProps<any>>((props, ref) => {
+// const MotionStarComponent = forwardRef<HTMLDivElement, CustomStarIconProps<any>>((props, ref) => {
+//   return <div ref={ref}>
+//     <CustomStarIcon color={props.color} />
+//   </div>
+// })
+
+function MotionStarComponent(props: CustomStarIconProps<any>, ref: LegacyRef<HTMLDivElement> | undefined) {
   return <div ref={ref}>
     <CustomStarIcon color={props.color} />
   </div>
-})
+}
 
 const MotionStarIcon = motion(MotionStarComponent)
 
