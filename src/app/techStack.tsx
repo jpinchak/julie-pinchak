@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, IconButton, Heading } from '@chakra-ui/react'
 import TechStackTile from './techStackTile';
 import Carousel from "react-multi-carousel";
@@ -43,8 +42,8 @@ function TechStack() {
 
   return (
     <>
-    <Box className='techstack-divider' />
-    <Box w={'100%'} h={'25vh'} minH={('200px')} className='techstack'>
+    <Box className='techstack-divider' px={5}/>
+    <Box w={'100%'} h={'25vh'} minH={('200px')} className='techstack' px={5}>
     <Heading color='blues.600' fontSize={28} pb={3}>My Tech Stack</Heading>
     <Carousel
       partialVisbile={false}

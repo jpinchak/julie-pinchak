@@ -4,10 +4,8 @@ import {
   Text,
   Button,
   Heading,
-  Grid,
-  GridItem,
   Flex,
-  useDisclosure
+  useDisclosure,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 import * as Yup from 'yup';
@@ -70,7 +68,7 @@ function Contact() {
             flexDir={'column'}
             alignItems={'flex-start'}
             w='60vw'
-            h='60vh'
+            h='100vh'
             alignSelf='center'
             pt='15%'
             pl='5vw'
