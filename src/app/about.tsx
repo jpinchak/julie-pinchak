@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import {
-  Heading,
   Flex,
   Text,
   Box,
@@ -46,7 +45,7 @@ function About() {
 
   return (
     <Tabs bg='blues.500' w={'100%'} p={2} onChange={index => setTabIndex(index)}>
-      <TabList width='60%' mb={5}>
+      <TabList width={['100%', null, null, null, '60%']} mb={5}>
         <Tab w='20vw'><Tile headingText='Past work' isActive={tabIndex == 0} /></Tab>
         <Tab w='20vw'><Tile headingText='Education' isActive={tabIndex == 1} /></Tab>
         <Tab w='20vw'><Tile headingText='About' isActive={tabIndex == 2} /></Tab>
@@ -59,9 +58,9 @@ function About() {
           {education}
         </TabPanel>
         <TabPanel>
-          <Heading color={'pinks.500'} fontSize={24} width={'100%'} py={5} textAlign={'center'}>
-            About me
-          </Heading>
+          <Text fontSize='md'>
+            {data.AboutText}
+          </Text>
         </TabPanel>
       </TabPanels>
 

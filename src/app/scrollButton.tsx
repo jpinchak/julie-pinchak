@@ -11,7 +11,7 @@ type ButtonProps = {
 
 function ScrollButton({ text, onClick, active = false, sectionName, onSetActive }: ButtonProps) {
   return (
-    <Link to={sectionName} spy={true} onSetActive={onSetActive} offset={sectionName == 'home' ? -80 : 0}>
+    <Link to={sectionName} spy={true} onSetActive={onSetActive} smooth={true} offset={sectionName == 'home' ? -80 : 0}>
       <Button
         p={'8px'}
         color={active ? 'blues.600' : 'blues.500'}
