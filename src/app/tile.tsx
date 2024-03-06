@@ -17,11 +17,11 @@ type TileProps = {
   isActive?: boolean;
 }
 
-const MotionStarComponent = forwardRef<HTMLDivElement, CustomStarIconProps<any>>((props, ref) => {
+function MotionStarComponent(props: CustomStarIconProps<any>, ref: LegacyRef<HTMLDivElement> | undefined) {
   return <div ref={ref}>
     <CustomStarIcon color={props.color} />
   </div>
-})
+}
 
 const MotionStarIcon = motion(MotionStarComponent)
 
