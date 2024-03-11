@@ -36,7 +36,7 @@ function Tile({ headingText, width ='20vw', isActive = false }: TileProps) {
       bg={isActive ? 'pinks.300' : 'pinks.200'}
       w={width}
       minW='90px'
-      h={'12vh'}
+      h={'10vh'}
       mx={1}
       pt={3}
       whileHover={{ boxShadow: '0px 0px 10px #da1686'}}

@@ -45,13 +45,13 @@ function About() {
 
   return (
     <Tabs bg='blues.500' w={'100%'} p={2} onChange={index => setTabIndex(index)}>
-      <TabList width={['100%', null, null, null, '60%']} mb={5}>
-        <Tab w='20vw'><Tile headingText='Past work' isActive={tabIndex == 0} /></Tab>
-        <Tab w='20vw'><Tile headingText='Education' isActive={tabIndex == 1} /></Tab>
-        <Tab w='20vw'><Tile headingText='About' isActive={tabIndex == 2} /></Tab>
+      <TabList width={'100%'} mb={5}>
+        <Tab width='100%'><Tile headingText='Past work' isActive={tabIndex == 0} width='100%' /></Tab>
+        <Tab width='100%'><Tile headingText='Education' isActive={tabIndex == 1} width='100%' /></Tab>
+        <Tab width='100%'><Tile headingText='About' isActive={tabIndex == 2} width='100%' /></Tab>
       </TabList>
       <TabPanels>
-        <TabPanel h={'80vh'}>
+        <TabPanel h={['1050px', '1000px', '950px', '750px', '550px', '475px']}>
           {workExperience}
         </TabPanel>
         <TabPanel>
